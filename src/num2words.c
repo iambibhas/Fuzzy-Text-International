@@ -3,7 +3,7 @@
 #include "strings-de.h"
 #include "strings-en_GB.h"
 #include "strings-en_US.h"
-#include "strings-es.h"
+#include "strings-bn.h"
 #include "strings-fr.h"
 #include "strings-no.h"
 #include "strings-sv.h"
@@ -58,8 +58,8 @@ const char* get_hour(Language lang, int index) {
     case EN_GB:
       return HOURS_EN_GB[index];
       break;
-    case ES:
-      return HOURS_ES[index];
+    case BN:
+      return HOURS_BN[index];
       break;
     case FR:
       return HOURS_FR[index];
@@ -86,8 +86,8 @@ const char* get_rel(Language lang, int index) {
     case EN_GB:
       return RELS_EN_GB[index];
       break;
-    case ES:
-      return RELS_ES[index];
+    case BN:
+      return RELS_BN[index];
       break;
     case FR:
       return RELS_FR[index];

@@ -102,7 +102,7 @@ static void makeAnimationsForLayer(Line *line, int delay)
 
 	// Start the animations
 	animation_schedule(&line->animation1->animation);
-	animation_schedule(&line->animation2->animation);	
+	animation_schedule(&line->animation2->animation);
 }
 
 static void updateLayerText(TextLayer* layer, char* text)
@@ -216,7 +216,7 @@ static void time_to_lines(int hours, int minutes, int seconds, char lines[NUM_LI
 	int length = NUM_LINES * BUFFER_SIZE + 1;
 	char timeStr[length];
 	time_to_words(lang, hours, minutes, seconds, timeStr, length);
-	
+
 	// Empty all lines
 	for (int i = 0; i < NUM_LINES; i++)
 	{
@@ -260,7 +260,7 @@ static void time_to_lines(int hours, int minutes, int seconds, char lines[NUM_LI
 		start = end + 1;
 		end = strstr(start, " ");
 	}
-	
+
 }
 
 // Update screen based on new time
@@ -271,7 +271,7 @@ static void display_time(struct tm *t)
 	char format[NUM_LINES];
 
 	time_to_lines(t->tm_hour, t->tm_min, t->tm_sec, textLine, format);
-	
+
 	int nextNLines = configureLayersForText(textLine, format);
 
 	int delay = 0;
@@ -281,7 +281,7 @@ static void display_time(struct tm *t)
 			delay += ANIMATION_STAGGER_TIME;
 		}
 	}
-	
+
 	currentNLines = nextNLines;
 }
 
@@ -316,7 +316,7 @@ static void display_initial_time(struct tm *t)
 		updateLayerText(lines[i].nextLayer, textLine[i]);
 		// This call switches current- and nextLayer
 		initLineForStart(&lines[i]);
-	}	
+	}
 }
 
 // Time handler called every minute by the system
@@ -335,12 +335,12 @@ static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed)
 static void up_single_click_handler(ClickRecognizerRef recognizer, Window *window) {
 	(void)recognizer;
 	(void)window;
-	
+
 	t->tm_min += 5;
 	if (t->tm_min >= 60) {
 		t->tm_min = 0;
 		t->tm_hour += 1;
-		
+
 		if (t->tm_hour >= 24) {
 			t->tm_hour = 0;
 		}
@@ -352,12 +352,12 @@ static void up_single_click_handler(ClickRecognizerRef recognizer, Window *windo
 static void down_single_click_handler(ClickRecognizerRef recognizer, Window *window) {
 	(void)recognizer;
 	(void)window;
-	
+
 	t->tm_min -= 5;
 	if (t->tm_min < 0) {
 		t->tm_min = 55;
 		t->tm_hour -= 1;
-		
+
 		if (t->tm_hour < 0) {
 			t->tm_hour = 23;
 		}

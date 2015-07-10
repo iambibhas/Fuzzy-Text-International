@@ -1,4 +1,4 @@
-var VERSION = "1.2.1";
+var VERSION = "1.3";
 
 var isReady = false;
 var callbacks = [];
@@ -32,7 +32,7 @@ function readyCallback(event) {
 function showConfiguration(event) {
   onReady(function() {
     var opts = getOptions();
-    var url  = "http://static.sitr.us.s3-website-us-west-2.amazonaws.com/configure-fuzzy-text.html";
+    var url  = "https://bibhas.in/pebble-dev/fuzzy-text/configure-fuzzy-text.html";
     Pebble.openURL(url + "#v=" + encodeURIComponent(VERSION) + "&options=" + encodeURIComponent(opts));
   });
 }
