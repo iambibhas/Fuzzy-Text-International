@@ -40,7 +40,7 @@ At this time the included languages are:
 - French
 - German
 - Norwegian
-- Spanish
+- Bengali
 - Swedish
 
 
@@ -67,15 +67,15 @@ Contributing
 If you would like to request a translation, provide a translation, or
 point out errors in a translation, please [open an issue][issue].
 
-[issue]: https://github.com/hallettj/Fuzzy-Text-International/issues/new
+[issue]: https://github.com/iambibhas/Fuzzy-Text-International/issues/new
 
 For an example of what is needed for translations, take a look at
 [`strings-en.c`][en].  In case you want to implement a translation
 yourself, look at [818e076][es] to see all of the code changes that are
 necessary to do so.
 
-[en]: https://github.com/hallettj/Fuzzy-Text-International/blob/master/src/strings-en.c
-[es]: https://github.com/hallettj/Fuzzy-Text-International/commit/818e07686761adc00245986f6d389076534a5c1a
+[en]: https://github.com/iambibhas/Fuzzy-Text-International/blob/master/src/strings-en_US.c
+[es]: https://github.com/iambibhas/Fuzzy-Text-International/commit/a1baeafe310f6d063a8a0db7db15a1614ab95c70
 
 Please feel free to open issues for matters other than translations!
 Pull requests are welcome as well.
